@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dropout Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Student Dropout Prediction</h1>
+            <p>Empowering educators with predictive insights.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="introduction" class="section-padded">
+            <div class="container">
+                <h2>About the System</h2>
+                <p>This system uses machine learning to predict the likelihood of a student dropping out. By analyzing key factors, it provides valuable insights to help institutions intervene and support at-risk students proactively.</p>
+            </div>
+        </section>
+
+        <section id="prediction-form" class="section-padded">
+            <div class="container">
+                <h2>Make a Prediction</h2>
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="enrollmentStatus">Enrollment Status</label>
+                        <select id="enrollmentStatus" required>
+                            <option value="">Select status</option>
+                            <option value="part-time">Part-Time</option>
+                            <option value="full-time">Full-Time</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Student Age</label>
+                        <input type="number" id="age" min="15" max="90" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gpa">GPA (0-10.0)</label>
+                        <input type="number" id="gpa" step="0.01" min="0" max="10.0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="absences">Number of Absences</label>
+                        <input type="number" id="absences" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="financialAid">Receiving Financial Aid?</label>
+                        <select id="financialAid" required>
+                            <option value="">Select option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn">Predict Dropout</button>
+                </form>
+
+                <div id="predictionResult" class="result-box">
+                    <h3>Prediction Result</h3>
+                    <p id="resultText">Please fill out the form to get a prediction.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="section-padded">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="icon">🔍</i>
+                        <h3>Predictive Analytics</h3>
+                        <p>Leverages machine learning models to forecast dropout risks with high accuracy.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon">📊</i>
+                        <h3>Data Visualization</h3>
+                        <p>Provides clear, intuitive dashboards and charts to understand risk factors.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon">👨‍🏫</i>
+                        <h3>Intervention Support</h3>
+                        <p>Helps identify at-risk students early, allowing for timely intervention strategies.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon">🔒</i>
+                        <h3>Secure & Private</h3>
+                        <p>Ensures the security and confidentiality of student data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Student Dropout Prediction System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
